@@ -70,6 +70,17 @@ export const API = axios.create({
 npm run dev
 ```
 
+
+#### 🌐 **Mock Endpoints**
+
+| Endpoint | Description | Example Query |
+|-----------|--------------|----------------|
+| `/api/nearby` | Returns neary by resturant | `?city=Mumbai` -- ?lat=latitude&lng=longitude |
+| `/api/restaurants/:id` | Returns Single resturant by Id | 
+
+
+---
+
 ## 📂 Folder Structure
 
 ```
