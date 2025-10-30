@@ -5,7 +5,7 @@ Discover nearby restaurants, personalize restaurant images with the Fastor logo,
 </p>
 
 <p align="center">
-  <a href="https://dash-forge-two.vercel.app">
+  <a href="fastor-restaurant-dtnmorwsf-neel-samels-projects.vercel.app">
     <img src="https://img.shields.io/badge/Frontend-Live%20Demo-blue?style=for-the-badge&logo=react" alt="Frontend Live Demo">
   </a>
   <a href="https://fastor-restaurant-app.onrender.com/api">
