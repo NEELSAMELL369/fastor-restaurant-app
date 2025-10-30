@@ -8,7 +8,7 @@ Discover nearby restaurants, personalize restaurant images with the Fastor logo,
   <a href="https://dash-forge-two.vercel.app">
     <img src="https://img.shields.io/badge/Frontend-Live%20Demo-blue?style=for-the-badge&logo=react" alt="Frontend Live Demo">
   </a>
-  <a href="https://dashforge.onrender.com">
+  <a href="https://fastor-restaurant-app.onrender.com/api">
     <img src="https://img.shields.io/badge/Backend-Live%20API-green?style=for-the-badge&logo=node.js" alt="Backend Live API">
   </a>
 </p>
