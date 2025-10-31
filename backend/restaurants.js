@@ -113,7 +113,7 @@ export const restaurants = [
     averagePrice: 500,
     lat: 28.5355,
     lng: 77.391,
-    image: "https://images.unsplash.com/photo-1603048305619-3a7a7083bca3",
+    image: "https://media-cdn.tripadvisor.com/media/photo-m/1280/28/01/ae/a2/dining-area.jpg",
     address: "Sector 18, Noida",
   },
   {
