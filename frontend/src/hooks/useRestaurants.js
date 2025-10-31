@@ -6,25 +6,29 @@ export function useRestaurants() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // ✅ Fetch restaurants by query (either city or lat/lng)
+  // ✅ Generic fetch (by city or lat/lng)
   const fetchRestaurants = async (query = "") => {
     try {
       setLoading(true);
       setError("");
+
       const res = await API.get(`/nearby${query}`);
+      console.log("✅ Fetched restaurants:", res.data);
+
       setRestaurants(res.data || []);
     } catch (err) {
-      console.error("Failed to fetch restaurants:", err);
+      console.error("❌ Failed to fetch restaurants:", err);
       setError("Unable to fetch restaurants. Please try again.");
     } finally {
       setLoading(false);
     }
   };
 
-  // ✅ Detect user's current location and fetch nearby restaurants
+  // ✅ Detect user location and fetch nearby restaurants
   const detectLocation = () => {
     if (!navigator.geolocation) {
       setError("Geolocation is not supported by your browser.");
+      fetchRestaurants(); // fallback
       return;
     }
 
@@ -32,27 +36,29 @@ export function useRestaurants() {
     navigator.geolocation.getCurrentPosition(
       async (pos) => {
         const { latitude, longitude } = pos.coords;
+        console.log("📍 Detected location:", latitude, longitude);
+
         try {
           const res = await API.get(`/nearby?lat=${latitude}&lng=${longitude}`);
+          console.log("✅ Nearby data:", res.data);
           setRestaurants(res.data || []);
         } catch (err) {
-          console.error("Error fetching nearby restaurants:", err);
+          console.error("❌ Error fetching nearby restaurants:", err);
           setError("Unable to fetch nearby restaurants.");
         } finally {
           setLoading(false);
         }
       },
       (err) => {
-        console.error("Location access denied:", err);
+        console.warn("⚠️ Location denied or failed:", err);
         setError("Location access denied. Showing default results.");
         setLoading(false);
-        // fallback — fetch default restaurants
-        fetchRestaurants();
+        fetchRestaurants(); // fallback to default list
       }
     );
   };
 
-  // ✅ Auto detect location on mount
+  // ✅ Auto-detect on mount (only once)
   useEffect(() => {
     detectLocation();
     // eslint-disable-next-line react-hooks/exhaustive-deps

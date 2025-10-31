@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 
 export default function RestaurantCard({ r, loading = false }) {
@@ -11,7 +10,7 @@ export default function RestaurantCard({ r, loading = false }) {
                  overflow-hidden transition h-[280px] flex flex-col"
       onClick={() => !loading && navigate(`/restaurant/${r.id}`)}
     >
-      {/* Image section */}
+      {/* 🖼️ Image Section */}
       <div className="w-full h-44 bg-gray-100 overflow-hidden">
         <img
           src={r.image}
@@ -21,7 +20,7 @@ export default function RestaurantCard({ r, loading = false }) {
         />
       </div>
 
-
+      {/* 🧾 Content */}
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div>
           <h2 className="font-semibold text-lg text-gray-800 truncate">
@@ -34,8 +33,12 @@ export default function RestaurantCard({ r, loading = false }) {
         </p>
       </div>
 
+      {/* 💫 Loading Overlay */}
       {loading && (
-        <div className="absolute inset-0 from-gray-100 to-gray-200 animate-pulse" />
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 
+                     animate-pulse z-10 opacity-90"
+        />
       )}
     </div>
   );
