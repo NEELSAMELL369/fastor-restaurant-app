@@ -137,7 +137,7 @@ export const restaurants = [
     averagePrice: 400,
     lat: 30.7333,
     lng: 76.7794,
-    image: "https://images.unsplash.com/photo-1604908177522-f2a98f9c6e0b",
+    image: "https://unsplash.com/photos/7yb08BMYhmQ",
     address: "Sector 17, Chandigarh",
   },
   {
