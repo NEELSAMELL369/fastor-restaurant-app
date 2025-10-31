@@ -44,7 +44,7 @@ export default function RestaurantList() {
               <RestaurantCard key={r.id} r={r} />
             ))}
 
-            {/* Keep placeholders when loading */}
+         
             {loading &&
               [...Array(6)].map((_, i) => (
                 <div

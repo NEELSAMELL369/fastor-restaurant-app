@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
+
 import { useNavigate } from "react-router-dom";
-import LoadingSkeleton from "./LoadingSkeleton";
 
 export default function RestaurantCard({ r, loading = false }) {
   const navigate = useNavigate();
@@ -22,7 +21,7 @@ export default function RestaurantCard({ r, loading = false }) {
         />
       </div>
 
-      {/* Content */}
+
       <div className="p-4 flex-1 flex flex-col justify-between">
         <div>
           <h2 className="font-semibold text-lg text-gray-800 truncate">
@@ -35,9 +34,8 @@ export default function RestaurantCard({ r, loading = false }) {
         </p>
       </div>
 
-      {/* Overlay shimmer */}
       {loading && (
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 animate-pulse" />
+        <div className="absolute inset-0 from-gray-100 to-gray-200 animate-pulse" />
       )}
     </div>
   );

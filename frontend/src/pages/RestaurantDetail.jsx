@@ -75,7 +75,7 @@ export default function RestaurantDetail() {
   // Loading State
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="flex items-center justify-center h-screen  from-blue-50 to-indigo-100">
         <p className="text-gray-600 text-lg animate-pulse">
           Loading restaurant details...
         </p>
