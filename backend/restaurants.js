@@ -137,7 +137,7 @@ export const restaurants = [
     averagePrice: 400,
     lat: 30.7333,
     lng: 76.7794,
-    image: "https://drive.google.com/uc?export=view&id=1cLfr4ipSABC6U-T6ZCDtb4xvfcSPu1qL",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761902450/photo-1657196118354-f25f29fe636d_aomjaj.avif",
     address: "Sector 17, Chandigarh",
   },
   {
@@ -161,7 +161,7 @@ export const restaurants = [
     averagePrice: 600,
     lat: 26.9124,
     lng: 75.7873,
-    image: "https://images.unsplash.com/photo-1603898037225-1d8c36fc7f8c",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761903195/photo-1482049016688-2d3e1b311543_p6ypx9.avif",
     address: "MI Road, Jaipur",
   },
   {
@@ -185,7 +185,7 @@ export const restaurants = [
     averagePrice: 350,
     lat: 12.9716,
     lng: 77.5946,
-    image: "https://images.unsplash.com/photo-1626082927389-bd982f54b1af",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761903337/photo-1555939594-58d7cb561ad1_wlhd7e.avif",
     address: "Indiranagar, Bangalore",
   },
   {
@@ -196,7 +196,7 @@ export const restaurants = [
     averagePrice: 700,
     lat: 12.9352,
     lng: 77.6245,
-    image: "https://images.unsplash.com/photo-1601924582971-b0a1f4e7e8a9",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761903336/photo-1512621776951-a57141f2eefd_g8qt0z.avif",
     address: "Koramangala, Bangalore",
   },
   {
@@ -244,7 +244,7 @@ export const restaurants = [
     averagePrice: 450,
     lat: 27.1767,
     lng: 78.0081,
-    image: "https://images.unsplash.com/photo-1627308595193-9a8b74a8b0c9",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761903336/photo-1512621776951-a57141f2eefd_g8qt0z.avif",
     address: "Taj Ganj, Agra",
   },
   {
@@ -255,7 +255,7 @@ export const restaurants = [
     averagePrice: 400,
     lat: 27.1803,
     lng: 78.009,
-    image: "https://images.unsplash.com/photo-1526318472351-bc02f1b520e1",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761903426/photo-1484723091739-30a097e8f929_ae6mea.avif",
     address: "Fatehabad Road, Agra",
   },
 
