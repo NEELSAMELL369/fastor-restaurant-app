@@ -1,96 +1,67 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { API } from "../utils/api";
+import { useState } from "react";
+import { MapPin } from "lucide-react";
+import SearchBar from "../components/SearchBar";
+import RestaurantCard from "../components/RestaurantCard";
+import { useRestaurants } from "../hooks/useRestaurants";
 
 export default function RestaurantList() {
-  const [restaurants, setRestaurants] = useState([]);
   const [city, setCity] = useState("");
-  const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
-
-  const fetchRestaurants = async (query = "") => {
-    try {
-      setLoading(true);
-      const res = await API.get(`/nearby${query}`);
-      setRestaurants(res.data);
-    } catch (err) {
-      console.error("Failed to fetch restaurants:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  const { restaurants, loading, fetchRestaurants, detectLocation } =
+    useRestaurants();
 
   const handleSearch = (e) => {
     e.preventDefault();
-    if (city) fetchRestaurants(`?city=${city}`);
+    if (city.trim()) fetchRestaurants(`?city=${city}`);
   };
-
-  const detectLocation = () => {
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        const { latitude, longitude } = pos.coords;
-        fetchRestaurants(`?lat=${latitude}&lng=${longitude}`);
-      },
-      (err) => {
-        console.warn("Geolocation failed:", err);
-        setLoading(false);
-      }
-    );
-  };
-
-  // 🟢 Fetch nearby restaurants automatically on mount
-  useEffect(() => {
-    detectLocation();
-  }, []);
 
   return (
-    <div className="p-4">
-      <div className="flex justify-between mb-4">
-        <form onSubmit={handleSearch} className="flex gap-2">
-          <input
-            type="text"
-            placeholder="Search by City"
-            className="border p-2 rounded"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
+    <div className="min-h-screen  from-blue-50 to-indigo-100 p-6">
+      <div className="max-w-6xl mx-auto">
+        {/* 🔍 Search Bar + Location Button */}
+        <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
+          <SearchBar
+            city={city}
+            setCity={setCity}
+            onSearch={handleSearch}
+            loading={loading}
           />
-          <button className="bg-blue-500 text-white px-4 rounded">
-            Search
+          <button
+            onClick={detectLocation}
+            disabled={loading}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg shadow transition text-white
+              ${loading ? "bg-green-400 cursor-not-allowed" : "bg-green-500 hover:bg-green-600"}`}
+          >
+            <MapPin className="w-5 h-5" />
+            <span>{loading ? "Detecting..." : "Use My Location"}</span>
           </button>
-        </form>
-        <button
-          onClick={detectLocation}
-          className="bg-green-500 text-white px-4 rounded"
-        >
-          Use My Location
-        </button>
-      </div>
-
-      {loading ? (
-        <p className="text-center text-gray-500">Loading nearby restaurants...</p>
-      ) : restaurants.length === 0 ? (
-        <p className="text-center text-gray-500">No restaurants found.</p>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {restaurants.map((r) => (
-            <div
-              key={r.id}
-              onClick={() => navigate(`/restaurant/${r.id}`)}
-              className="border rounded-lg shadow hover:shadow-md cursor-pointer overflow-hidden"
-            >
-              <img
-                src={r.image}
-                alt={r.name}
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-3">
-                <h2 className="font-semibold text-lg">{r.name}</h2>
-                <p className="text-sm text-gray-600">{r.city}</p>
-              </div>
-            </div>
-          ))}
         </div>
-      )}
+
+        {/* 🍽️ Restaurant List */}
+        <div className="relative">
+          {/* Grid always stays mounted */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {restaurants.map((r) => (
+              <RestaurantCard key={r.id} r={r} />
+            ))}
+
+            {/* Keep placeholders when loading */}
+            {loading &&
+              [...Array(6)].map((_, i) => (
+                <div
+                  key={`skeleton-${i}`}
+                  className="bg-gray-200 rounded-2xl h-[280px] animate-pulse"
+                />
+              ))}
+          </div>
+
+          {/* Empty state */}
+          {!loading && restaurants.length === 0 && (
+            <p className="text-center text-gray-500 mt-16 text-lg">
+              No restaurants found 🍽️
+            </p>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

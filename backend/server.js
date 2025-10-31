@@ -30,7 +30,7 @@ app.get("/api/nearby", (req, res) => {
 
     withDistance.sort((a, b) => a.distance - b.distance);
     
-    return res.json(withDistance.slice(0, 10)); // Return nearest 5
+    return res.json(withDistance.slice(0, 9)); // Return nearest 5
   }
 
   res.json(restaurants);

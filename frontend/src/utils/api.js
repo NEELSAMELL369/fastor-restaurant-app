@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "http://localhost:5000/api", // your backend base URL
+  baseURL: "https://fastor-restaurant-app.onrender.com/api", // your backend base URL
 });
