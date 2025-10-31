@@ -54,7 +54,7 @@ export const restaurants = [
     averagePrice: 650,
     lat: 19.2183,
     lng: 72.9781,
-    image: "https://images.unsplash.com/photo-1600891963934-88eeb3f8e523",
+    image: "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=80",
     address: "Juhu Beach, Mumbai",
   },
   {
@@ -65,7 +65,7 @@ export const restaurants = [
     averagePrice: 400,
     lat: 19.1037,
     lng: 72.8354,
-    image: "https://images.unsplash.com/photo-1555992336-03a23c5f9e17",
+    image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80",
     address: "Powai, Mumbai",
   },
 
