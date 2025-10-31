@@ -268,7 +268,7 @@ export const restaurants = [
     averagePrice: 500,
     lat: 26.8467,
     lng: 80.9462,
-    image: "https://images.unsplash.com/photo-1589308078054-8326c67b22b8",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761903847/photo-1414235077428-338989a2e8c0_mqd0om.avif",
     address: "Hazratganj, Lucknow",
   },
   {
@@ -279,7 +279,7 @@ export const restaurants = [
     averagePrice: 300,
     lat: 26.857,
     lng: 80.942,
-    image: "https://images.unsplash.com/photo-1604908177522-f2a98f9c6e0b",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761903847/photo-1565299585323-38d6b0865b47_nvv2in.avif",
     address: "Aminabad, Lucknow",
   },
 
@@ -292,7 +292,7 @@ export const restaurants = [
     averagePrice: 450,
     lat: 31.634,
     lng: 74.8723,
-    image: "https://images.unsplash.com/photo-1605478421920-739864fa3ef1",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761904100/photo-1490914327627-9fe8d52f4d90_lgv6rq.avif",
     address: "Golden Temple Road, Amritsar",
   },
   {
@@ -303,7 +303,7 @@ export const restaurants = [
     averagePrice: 300,
     lat: 31.633,
     lng: 74.875,
-    image: "https://images.unsplash.com/photo-1562967916-eb82221dfb36",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761904101/photo-1436564989038-18b9958df72b_tjrppu.avif",
     address: "Chowk Passian, Amritsar",
   },
 
@@ -327,7 +327,7 @@ export const restaurants = [
     averagePrice: 400,
     lat: 31.105,
     lng: 77.172,
-    image: "https://images.unsplash.com/photo-1626082927508-7dfb7a0b9c5a",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761904186/photo-1556761223-4c4282c73f77_tabhf8.avif",
     address: "Lakkar Bazaar, Shimla",
   },
 
@@ -340,7 +340,7 @@ export const restaurants = [
     averagePrice: 450,
     lat: 30.3165,
     lng: 78.0322,
-    image: "https://images.unsplash.com/photo-1601050690597-88f1f60e8f0d",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761904270/photo-1551024601-bec78aea704b_sfwmv6.avif",
     address: "Rajpur Road, Dehradun",
   },
   {
@@ -351,7 +351,7 @@ export const restaurants = [
     averagePrice: 350,
     lat: 30.318,
     lng: 78.036,
-    image: "https://images.unsplash.com/photo-1523942839745-7848d4e9b0d9",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761904269/photo-1611599537845-1c7aca0091c0_ofijy5.avif",
     address: "Clock Tower, Dehradun",
   },
 
@@ -364,7 +364,7 @@ export const restaurants = [
     averagePrice: 400,
     lat: 30.901,
     lng: 75.8573,
-    image: "https://images.unsplash.com/photo-1625944230943-4f9c4eb5b85c",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761904333/photo-1577805947697-89e18249d767_qmpmco.avif",
     address: "Ferozepur Road, Ludhiana",
   },
   {
@@ -388,7 +388,7 @@ export const restaurants = [
     averagePrice: 350,
     lat: 28.9845,
     lng: 77.7064,
-    image: "https://images.unsplash.com/photo-1589308078054-8326c67b22b8",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761904390/photo-1506458539166-34079f9e1d2c_dw5ikz.avif",
     address: "Abu Lane, Meerut",
   },
   {
@@ -399,7 +399,7 @@ export const restaurants = [
     averagePrice: 280,
     lat: 28.986,
     lng: 77.707,
-    image: "https://images.unsplash.com/photo-1526318472351-bc02f1b520e1",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761904389/photo-1506368249639-73a05d6f6488_bogkqb.avif",
     address: "Shastri Nagar, Meerut",
   },
 
@@ -412,7 +412,7 @@ export const restaurants = [
     averagePrice: 400,
     lat: 28.4089,
     lng: 77.3178,
-    image: "https://images.unsplash.com/photo-1604908177522-f2a98f9c6e0b",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761904461/photo-1556386734-4227a180d19e_cecpfm.avif",
     address: "NIT, Faridabad",
   },
   {
@@ -447,7 +447,7 @@ export const restaurants = [
     averagePrice: 400,
     lat: 32.243,
     lng: 77.188,
-    image: "https://images.unsplash.com/photo-1603048305619-3a7a7083bca3",
+    image: "https://res.cloudinary.com/dcodxilzg/image/upload/v1761904515/photo-1634141613544-001d33883517_scavzt.avif",
     address: "Old Manali, Manali",
   },
 
