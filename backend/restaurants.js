@@ -78,7 +78,7 @@ export const restaurants = [
     averagePrice: 350,
     lat: 28.4595,
     lng: 77.0266,
-    image: "https://images.unsplash.com/photo-1625944230943-4f9c4eb5b85c",
+    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=1200&q=80",
     address: "Cyber Hub, Gurugram",
   },
   {
@@ -100,7 +100,7 @@ export const restaurants = [
     averagePrice: 450,
     lat: 28.4563,
     lng: 77.0487,
-    image: "https://images.unsplash.com/photo-1523942839745-7848d4e9b0d9",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
     address: "Sushant Lok, Gurugram",
   },
 
